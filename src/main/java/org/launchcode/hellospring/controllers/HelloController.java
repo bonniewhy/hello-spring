@@ -29,6 +29,13 @@ public class HelloController {
 
         String html = "<form method='post'>" +
                 "<input type='text' name='name' />" +
+                "<select id='lang'>" +
+                "<option value='eng'>English</option>" +
+                "<option value='spa'>Spanish</option>" +
+                "<option value='fre'>French</option>" +
+                "<option value='jap'>Japanese</option>" +
+                "<option value='rus'>Russian</option>" +
+                "</select>" +
                 "<input type='submit' value='Greet Me!' />" +
                 "</form>";
 
@@ -37,12 +44,32 @@ public class HelloController {
 
     @RequestMapping(value = "hello", method = RequestMethod.POST)
     @ResponseBody
-    public String helloPost(HttpServletRequest request) {
+    // public String helloPost(HttpServletRequest request) {
 
+    // }
+
+    public static String createMessage(HttpServletRequest request) {
         String name = request.getParameter("name");
+        String lang = request.getParameter("lang");
 
-        return "Hello, " + name + "!";
-
+        if (lang == "eng") {
+            return "Hello, " + name + "!";
+        }
+        else if (lang == "spa") {
+            return "Hola, " + name + "!";
+        }
+        else if (lang == "fre") {
+            return "Bonjour, " + name + "!";
+        }
+        else if (lang == "jap") {
+            return "Konnichiwa, " + name + "!";
+        }
+        else if (lang == "rus") {
+            return "Privet, " + name + "!";
+        }
+        else {
+            return "Sorry, I don't know that language. D:";
+        }
     }
 
     @RequestMapping(value = "goodbye")
