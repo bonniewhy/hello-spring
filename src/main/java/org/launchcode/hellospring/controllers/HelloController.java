@@ -59,21 +59,6 @@ public class HelloController {
         // [ ] Bonus Mission 4: The bonus mission above doesn't discriminate between requests made by you or somebody else. In other words, it counts total greetings rather than greetings to a specific user. Fix this by using cookies. (See original instructions for how to do this...)
 
         if (lang.equals("eng")) {
-
-            return "Hello, " + name + "!";
-
-        } else if (lang.equals("fre")) {
-
-            return "Bonjour, " + name + "!";
-
-        } else if (lang.equals("spa")) {
-
-            return "Hola, " + name + "!";
-
-        } else if (lang.equals("rus")) {
-
-
-        if (lang.equals("eng")) {
             return "Hello, " + name + "!";
         }
         else if (lang.equals("spa")) {
