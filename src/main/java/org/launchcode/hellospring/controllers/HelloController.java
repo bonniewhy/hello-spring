@@ -29,7 +29,7 @@ public class HelloController {
 
         String html = "<form method='post'>" +
                 "<input type='text' name='name' />" +
-                "<select id='lang'>" +
+                "<select name='lang'>" +
                 "<option value='eng'>English</option>" +
                 "<option value='spa'>Spanish</option>" +
                 "<option value='fre'>French</option>" +
@@ -52,19 +52,19 @@ public class HelloController {
         String name = request.getParameter("name");
         String lang = request.getParameter("lang");
 
-        if (lang == "eng") {
+        if (lang.equals("eng")) {
             return "Hello, " + name + "!";
         }
-        else if (lang == "spa") {
+        else if (lang.equals("spa")) {
             return "Hola, " + name + "!";
         }
-        else if (lang == "fre") {
+        else if (lang.equals("fre")) {
             return "Bonjour, " + name + "!";
         }
-        else if (lang == "jap") {
+        else if (lang.equals("jap")) {
             return "Konnichiwa, " + name + "!";
         }
-        else if (lang == "rus") {
+        else if (lang.equals("rus")) {
             return "Privet, " + name + "!";
         }
         else {
