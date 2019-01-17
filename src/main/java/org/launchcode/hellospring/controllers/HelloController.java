@@ -50,7 +50,6 @@ public class HelloController {
         String name = request.getParameter("name");
         String lang = request.getParameter("lang");
 
-<<<<<<< HEAD
         // [ ] Bonus Mission 1: Add a bit of HTML to the response string to make it look nicer.
 
         // [ ] Bonus Mission 2: Restructure the code so that the controller class doesn't know anything about the specific languages available. In other words, it asks the model for available languages to present to the user.
@@ -73,7 +72,7 @@ public class HelloController {
 
         } else if (lang.equals("rus")) {
 
-=======
+
         if (lang.equals("eng")) {
             return "Hello, " + name + "!";
         }
@@ -87,7 +86,6 @@ public class HelloController {
             return "Konnichiwa, " + name + "!";
         }
         else if (lang.equals("rus")) {
->>>>>>> b4e9a5ade17164cd15ccc84090f1dd03b81d3465
             return "Privet, " + name + "!";
 
         } else if (lang.equals("jap")) {
